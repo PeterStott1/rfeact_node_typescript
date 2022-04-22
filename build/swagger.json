@@ -201,7 +201,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "developer-sense-api",
+		"title": "Api typescript swagger testing",
 		"version": "1.0.0",
 		"license": {
 			"name": "ISC"
