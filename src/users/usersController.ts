@@ -11,6 +11,7 @@ import {
 } from "tsoa";
 import { User } from "./user";
 import { UsersService, UserCreationParams } from "./userService";
+import { checkPermissions } from "src/middleware/permissions.middleware";
 
 @Route("users")
 export class UsersController extends Controller {
@@ -19,6 +20,7 @@ export class UsersController extends Controller {
     @Path() userId: number,
     @Query() userName?: string
   ): Promise<User> {
+    checkPermissions("create:items");
     return new UsersService().get(userId, userName);
   }
 
